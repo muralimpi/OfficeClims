@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="processEngineConfiguration"
+          class="org.activiti.engine.impl.cfg.StandaloneInMemProcessEngineConfiguration">
+
+        <!-- mail server configurations -->
+        <property name="mailServerHost" value="smtp.gmail.com"/>
+        <property name="mailServerPort" value="25"/>
+        <property name="mailServerDefaultFrom" value="dinesh.nadikatla@serole.com"/>
+        <property name="mailServerUsername" value="dinesh.nadikatla@serole.com"/>
+        <property name="mailServerPassword" value="Dinu1678@"/>
+        <property name="mailServerUseSSL" value="false"/>
+        <property name="mailServerUseTLS" value="true"/>
+        <property name="spring.freemarker.template-loader-path" value="classpath:/email-templates"/>
+       
+    </bean>
+
+</beans>

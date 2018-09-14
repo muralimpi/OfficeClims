@@ -1,0 +1,20 @@
+table.schemaName = "EL_CLAIMS";
+table.tableType = COLUMNSTORE;
+
+table.columns =
+ [
+    {name = "LLRISKCODE_ID"; sqlType = INTEGER; nullable = false; comment = "LL RiskCode Id";},
+    {name = "RESULT_ID"; sqlType = INTEGER; nullable = true; comment = "Result Id";},
+    {name = "MEMBER_ID"; sqlType = INTEGER; nullable = true; comment = "Member Id";},
+    {name = "INTREF_ID"; sqlType = INTEGER; nullable = true; comment = "Internal Reference Id";},
+    {name = "POLICY_TRANSACTION_ID"; sqlType = INTEGER; nullable = true; comment = "Policy Transaction Id";},
+    {name = "MARKET_TRANSACTION_ID"; sqlType = INTEGER; nullable = true; comment = "Market Transaction Id";},
+    {name = "CLAIM_ID"; sqlType = INTEGER; nullable = true; comment = "Claim Id";},
+    {name = "CLAIM_HEADER_ID"; sqlType = INTEGER; nullable = true; comment = "Claim Header Id";},
+    {name = "ELRISK_CODE"; sqlType = VARCHAR; nullable = true; comment = "El Risk Code";length=20;},
+    {name = "ELRISK_DESCRIPTION"; sqlType = VARCHAR; nullable = true; comment = "El Risk Description"; length=100;},
+    {name = "LOB_ID"; sqlType = INTEGER; nullable = true; comment = "Lob Id";},
+    {name = "SEGMENT_ID"; sqlType = INTEGER; nullable = true; comment = "Segment Id"; },
+    {name = "DELETE_FLAG"; sqlType = VARCHAR; nullable = true; comment = "Delete Flag"; length=1;}
+     ];
+table.primaryKey.pkcolumns = ["LLRISKCODE_ID"];

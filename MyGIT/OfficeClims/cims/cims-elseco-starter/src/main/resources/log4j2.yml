@@ -1,0 +1,37 @@
+Configutation:
+  status: debug
+
+  Appenders:
+    Console:
+      name: CONSOLE
+      target: SYSTEM_OUT
+      PatternLayout:
+        Pattern: "%d{ISO8601} %-5p [%c{3}] [%t] %m%n"
+    RollingFile:
+      - name: APPLICATION
+        fileName: /root/tools/services/logs/cims_app.log
+        filePattern: "/root/tools/services/logs/$${date:yyyy-MM}/cims_app-%d{yyyy-MM-dd}-%i.log.gz"
+        #fileName: C:\\Users\\Serole_Vijay\\Desktop\\GIT_Hybris\\logs\\cims_app.log
+        #filePattern: "C:\\Users\\Serole_Vijay\\Desktop\\GIT_Hybris\\logs\\$${date:yyyy-MM}/my-app-%d{yyyy-MM-dd}-%i.log.gz"
+        PatternLayout:
+          Pattern: "%d{ISO8601} %-5p [%c{3}] [%t] %m%n"
+        policies:
+          TimeBasedTriggeringPolicy:
+            interval: 1
+            modulate: true
+          SizeBasedTriggeringPolicy:
+           size: 10 MB
+
+  Loggers:
+      Root:        
+        level: info        
+        AppenderRef:
+          - ref: CONSOLE
+          - ref: APPLICATION
+      Logger:
+        - name: com.serole
+          additivity: false          
+          level: info          
+          AppenderRef:
+            - ref: CONSOLE
+            - ref: APPLICATION

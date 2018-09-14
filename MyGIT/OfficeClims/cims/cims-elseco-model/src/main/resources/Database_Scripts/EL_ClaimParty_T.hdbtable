@@ -1,0 +1,34 @@
+table.schemaName = "EL_CLAIMS";
+table.tableType = COLUMNSTORE;
+
+table.columns =
+ [
+    {name = "PARTY_ID"; sqlType = INTEGER; nullable = false; comment = "Party Id";},
+    {name = "CLAIM_HEADER_ID"; sqlType = INTEGER; nullable = true; comment = "Claim Header Id";},
+    {name = "CLAIM_ID"; sqlType = INTEGER; nullable = true; comment = "Claim Detail Id";},
+    {name = "UCR_NO"; sqlType = VARCHAR; nullable = true; comment = "Ucr Number"; length=100;},
+    {name = "EXTERNAL_REF_NO"; sqlType = VARCHAR; nullable = true; comment = "External Number"; length=100;},
+    {name = "PARTY_NAME"; sqlType = VARCHAR; nullable = true; comment = "Party Name"; length=100;},
+    {name = "PARTY_BP_ID"; sqlType = INTEGER; nullable = true; comment = "Party Bp Id";},
+    {name = "PARTY_DESCRIPTION"; sqlType = VARCHAR; nullable = true; comment = "Party Description"; length=1000;},
+    {name = "PARTY_INV_SOURCE"; sqlType = VARCHAR; nullable = true; comment = "Party Inv Source"; length=100;},
+    {name = "PARTY_INTRODUCER_ID"; sqlType = INTEGER; nullable = true; comment = "Party Introducer Id";},
+    {name = "PARTY_INTRODUCER_NAME"; sqlType = VARCHAR; nullable = true; comment = "Party Introducer Name"; length=100;},
+    {name = "PARTY_SERVICE_AMT_INCURED"; sqlType = DECIMAL; nullable = true; comment = "Party Srv Amount Incured"; length=15;},
+    {name = "PARTY_PERC_SERVICE_CHRG_INV1"; sqlType = DECIMAL; nullable = true; comment = "Party Percent Srv Chrg Inv1"; length=15;},
+    {name = "PARTY_PERC_SERVICE_CHRG_INV2"; sqlType = DECIMAL; nullable = true; comment = "Party Percent Srv Chrg Inv2"; length=15;},
+    {name = "PARTY_PERC_SERVICE_CHRG_INV3"; sqlType = DECIMAL; nullable = true; comment = "Party Percent Srv Chrg Inv3"; length=15;},
+    {name = "PARTY_PERC_SERVICE_CHRG_INV4"; sqlType = DECIMAL; nullable = true; comment = "Party Percent Srv Chrg Inv4"; length=15;},
+    {name = "COLLECTION_TYPE"; sqlType = VARCHAR; nullable = true; comment = "Collection Type"; length=20;},
+    {name = "PARTY_SERVICE_AMT_ADDSUBCHRG"; sqlType = DECIMAL; nullable = true; comment = "Party Srv Amount Add Subch"; length=15;},
+    {name = "PARTY_SERVICE_AMT_PREVPAID"; sqlType = DECIMAL; nullable = true; comment = "Party Srv Amount Prev Paid"; length=15;},
+    {name = "PARTY_SERVICE_AMT_SETTLED"; sqlType = DECIMAL; nullable = true; comment = "Party Srv Amount Settled"; length=15;},
+    {name = "PARTY_SERVICE_DETAILS"; sqlType = VARCHAR; nullable = true; comment = "Party Srv details"; length=5000;},
+    {name = "PARTY_INV_INTERNAL_STATUS"; sqlType = VARCHAR; nullable = true; comment = "Party Inv Internal Status"; length=100;},
+    {name = "PARTY_INV_EXTERNAL_STATUS"; sqlType = VARCHAR; nullable = true; comment = "Party Inv External Status"; length=100;},
+    {name = "PARTY_INV_DATE"; sqlType = DATE; nullable = true; comment = "Party Inv Date"; },
+    {name = "PARTY_REMITANCE_ACCT_DTS"; sqlType = VARCHAR; nullable = true; comment = "Party remitance Account Dts"; length=1000;},
+    {name = "PARTY_INV_APPROVAL"; sqlType = VARCHAR; nullable = true; comment = "Party Inv Approval"; length=20;},
+    {name = "DELETE_FLAG"; sqlType = VARCHAR; nullable = true; comment = "Delete Flag"; length=1;}
+     ];
+table.primaryKey.pkcolumns = ["PARTY_ID"]; 

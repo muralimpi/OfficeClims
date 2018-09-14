@@ -1,0 +1,20 @@
+table.schemaName = "EL_CLAIMS";
+table.tableType = COLUMNSTORE;
+
+table.columns =
+ [
+    {name = "ID"; sqlType = INTEGER; nullable = false; comment = "Elseco-Uniqie ID";},
+    {name = "ApplicationHandle"; sqlType = VARCHAR; nullable = true; comment = ""; length=100;},
+    {name = "ScreenHandle"; sqlType = VARCHAR; nullable = false; comment = "";length=100;},
+    {name = "Depend1"; sqlType = VARCHAR; nullable = true; comment = "";length=20;},
+    {name = "Depend2"; sqlType = VARCHAR; nullable = true; comment = "";length=20;},
+    {name = "EntityHandle"; sqlType = VARCHAR; nullable = true; comment = "";length=20;},
+    {name = "EntityCode"; sqlType = VARCHAR; nullable = true; comment = "";length=100;},
+    {name = "EntityName1"; sqlType = VARCHAR; nullable = true; comment = ""; length=100;},
+    {name = "EntityName2"; sqlType = VARCHAR; nullable = true; comment = ""; length=100;},
+    {name = "EntityDesc"; sqlType = VARCHAR; nullable = true; comment = ""; length=200;},
+    {name = "IsEnable"; sqlType = VARCHAR; nullable = true; comment = "";length=10;},
+    {name = "Status"; sqlType = VARCHAR; nullable = true; comment = ""; length=100;}
+ ];
+ 
+table.primaryKey.pkcolumns = ["ID"];

@@ -1,0 +1,9 @@
+<config>
+	<context-values>
+		<resource path="src/main/resources/templates/claim-notify.ftl">
+			<value key="claim" object-class="com.elseco.nyms.model.claim.ClaimsHandler"/>
+		</resource>
+	</context-values>
+	<macro-library>
+	</macro-library>
+</config>

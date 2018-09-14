@@ -1,0 +1,19 @@
+table.schemaName = "EL_CLAIMS";
+table.tableType = COLUMNSTORE;
+
+table.columns =
+ [
+    {name = "CLAIM_FILE_ID"; sqlType = INTEGER; nullable = false; comment = "Claim File Id";},
+    {name = "CLAIM_ID"; sqlType = INTEGER; nullable = true; comment = "Claim Id";},
+    {name = "CLAIM_HEADER_ID"; sqlType = INTEGER; nullable = true; comment = "Claim Header Id";},
+    {name = "VERSION"; sqlType = VARCHAR; nullable = true; comment = "Version"; length=3;},
+    {name = "CLAIM_FILE_TYPE"; sqlType = VARCHAR; nullable = true; comment = "Claim File Type";  length=3;},
+    {name = "CHNG_INDICATOR"; sqlType = VARCHAR; nullable = true; comment = "Change Indicator"; length=1;},
+    {name = "STATUS_CHNG_REASON"; sqlType = VARCHAR; nullable = true; comment = "Status Change Reason";length=10;},
+    {name = "FILE_STATUS"; sqlType = VARCHAR; nullable = true; comment = "File Status";length=10;},
+    {name = "STATUSCHNG_BY"; sqlType = VARCHAR; nullable = true; comment = "Status is Changed By";length=15;},
+    {name = "STATUSCHNG_TIME"; sqlType = DATE; nullable = true; comment = "Status Changed Time"; },
+     {name = "DELETE_FLAG"; sqlType = VARCHAR; nullable = true; comment = "Delete Flag"; length=1;}
+     ];
+table.primaryKey.pkcolumns = ["CLAIM_FILE_ID"];
+table.primaryKey.pkcolumns = ["CLAIM_ID"];

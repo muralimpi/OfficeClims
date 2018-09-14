@@ -1,0 +1,24 @@
+table.schemaName = "EL_CLAIMS";
+table.tableType = COLUMNSTORE;
+
+table.columns =
+ [
+    {name = "PAYEE_ID"; sqlType = INTEGER; nullable = false; comment = "Payee Id";},
+    {name = "CLAIM_HEADER_ID"; sqlType = INTEGER; nullable = true; comment = "Claim Header Id";},
+    {name = "CLAIM_ID"; sqlType = INTEGER; nullable = true; comment = "Claim Detail Id";},
+    {name = "CLAIM_TRANSACTION_ID"; sqlType = INTEGER; nullable = true; comment = "Claim Transaction Id";},
+    {name = "UCR_NO"; sqlType = VARCHAR; nullable = true; comment = "Ucr Number"; length=100;},
+    {name = "EXTERNAL_REF_NO"; sqlType = VARCHAR; nullable = true; comment = "External Number"; length=100;},
+    {name = "TRANSACTION_REF_NO"; sqlType = VARCHAR; nullable = true; comment = "Transaction Ref Number"; length=100;},
+    {name = "PAYEE_BP_ID"; sqlType = VARCHAR; nullable = true; comment = "Payee Bp Id"; length=20;},
+    {name = "PAYEE_NAME"; sqlType = VARCHAR; nullable = true; comment = "Payee Name"; length=50;},
+    {name = "PAYEE_EMAIL"; sqlType = VARCHAR; nullable = true; comment = "Payee Email"; length=50;},
+    {name = "PAYEE_ACCOUNT"; sqlType = VARCHAR; nullable = true; comment = "Party Account"; length=25;},
+    {name = "PAYEE_AMOUNT"; sqlType = DECIMAL; nullable = true; comment = "Party Amount"; length=25;},
+    {name = "PAYEE_OUTSTNDING_AMOUNT"; sqlType = VARCHAR; nullable = true; comment = "Party Outstanding Amount"; length=25;},
+    {name = "PAYEE_CURRENCY"; sqlType = VARCHAR; nullable = true; comment = "Party Currency"; length=5;},
+    {name = "PAYEE_TYPE"; sqlType = VARCHAR; nullable = true; comment = "Party Type"; length=15;},
+    {name = "STATUS"; sqlType = VARCHAR; nullable = true; comment = "Status"; length=20;},
+    {name = "DELETE_FLAG"; sqlType = VARCHAR; nullable = true; comment = "Delete Flag"; length=1;}
+     ];
+table.primaryKey.pkcolumns = ["PAYEE_ID"];

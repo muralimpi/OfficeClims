@@ -1,0 +1,24 @@
+table.schemaName = "EL_CLAIMS";
+table.tableType = COLUMNSTORE;
+
+table.columns =
+ [
+    {name = "CLAIM_RESERVE_ID"; sqlType = INTEGER; nullable = false; comment = "Claim Reserve Id";},
+    {name = "RESERVE_FLAG"; sqlType = VARCHAR; nullable = true; comment = "Reserve Flag"; length=25;},
+    {name = "RESERVE_AMT"; sqlType = DECIMAL; nullable = true;  comment = "Reserve Amount";},
+    {name = "INITIAL_DETAILS"; sqlType = VARCHAR; nullable = true; comment = "Initial Details"; length=30;},
+    {name = "CLAIM_HEADER_ID"; sqlType = INTEGER; nullable = true; comment = "Claim Header Id";},
+    {name = "CLAIM_ID"; sqlType = INTEGER; nullable = true; comment = "Claim Id";},
+    {name = "RESERVE_TYPE"; sqlType = VARCHAR; nullable = true; comment = "Reserve Type"; length=10;},
+    {name = "POOL_NAME"; sqlType = VARCHAR; nullable = true; comment = "Pool Name"; length=30;},
+    {name = "MEMBER_NAME"; sqlType = VARCHAR; nullable = true; comment = "Member Name"; length=30;},
+    {name = "ALLOCATION_PERCENT"; sqlType = DECIMAL; nullable = true; comment = "Allocation Percent";},
+    {name = "PRIVILEDGE_TYPE"; sqlType = VARCHAR; nullable = true; comment = "Priviledge Type"; length=3;},
+    {name = "BALANCE_AMT"; sqlType = DECIMAL; nullable = true; comment = "Balance Amount"; length=10;},
+    {name = "INDEMNITY_RESERVE_AMT"; sqlType = DECIMAL; nullable = true; comment = "Indemnity Reserve Amount"; length=10;},
+    {name = "FEE_RESERVE_AMT"; sqlType = DECIMAL; nullable = true; comment = "Fee Reserve Amount"; length=10;},
+    {name = "DELETE_FLAG"; sqlType = VARCHAR; nullable = true; comment = "Delete Flag"; length=1;}
+     ];
+table.primaryKey.pkcolumns = ["CLAIM_RESERVE_ID"];
+
+

@@ -1,0 +1,55 @@
+table.schemaName = "EL_CLAIMS";
+table.tableType = COLUMNSTORE;
+
+table.columns =
+ [
+    {name = "MEMBER_ID"; sqlType = INTEGER; nullable = false; comment = "Member Id";},
+    {name = "STAMP_ID"; sqlType = INTEGER; nullable = true; comment = "Stamp Id";},
+    {name = "INTREF_ID"; sqlType = INTEGER; nullable = true; comment = "Internal Reference Id";},
+    {name = "POLICY_TRANSACTION_ID"; sqlType = INTEGER; nullable = true; comment = "Policy Transaction Id";},
+    {name = "MARKET_TRANSACTION_ID"; sqlType = INTEGER; nullable = true; comment = "Market Transaction Id";},
+    {name = "CLAIM_ID"; sqlType = INTEGER; nullable = true; comment = "Claim Id";},
+    {name = "CLAIM_HEADER_ID"; sqlType = INTEGER; nullable = true; comment = "Claim Header Id";},
+    {name = "MEMBER_BP_ID"; sqlType = INTEGER; nullable = true; comment = "Memeber Bp Id";},
+    {name = "STAMP_NAME"; sqlType = VARCHAR; nullable = true; comment = "Stamp Name"; length=40;},
+    {name = "STAMPSTART_DT"; sqlType = DATE; nullable = true;  comment = "Stamp Start Date";},
+    {name = "STAMPEND_DT"; sqlType = DATE; nullable = true; comment = "Stamp End Date";},
+    {name = "STAMPSTATUS_ID"; sqlType = INTEGER; nullable = true; comment = "Stamp Status Id";},
+    {name = "STAMP_DESCRIPTION"; sqlType = VARCHAR; nullable = true; comment = "Stamp Description"; length=200;},
+    {name = "CREATEDON"; sqlType = DATE; nullable = true; comment = "Created On";},
+    {name = "APPROVEDON"; sqlType = DATE; nullable = true; comment = "Approved On";},
+    {name = "CREATEDBY"; sqlType = VARCHAR; nullable = true; comment = "Created By"; length=20;},
+    {name = "SUBMITTEDBY"; sqlType = VARCHAR; nullable = true; comment = "Submitted By"; length=20;},
+    {name = "SUBMITTEDON"; sqlType = DATE; nullable = true; comment = "Submitted On";},
+    {name = "APPROVEDBY"; sqlType = VARCHAR; nullable = true; comment = "Approved By"; length=20;},
+    {name = "POOLUWY_ID"; sqlType = VARCHAR; nullable = true; comment = "Pool UWY ID"; length=20;},
+    {name = "STATUS"; sqlType = VARCHAR; nullable = true; comment = "Status"; length=20;},
+    {name = "IS_COLLECTED"; sqlType = VARCHAR; nullable = true; comment = "Is collected"; length=10;},
+    {name = "COLLECTION_TYPE"; sqlType = VARCHAR; nullable = true; comment = "Collection type"; length=20;},
+    {name = "FRONTIER"; sqlType = VARCHAR; nullable = true; comment = "Frontier"; length=20;},
+    {name = "TRANSACTIONING"; sqlType = VARCHAR; nullable = true; comment = "Transactioning"; length=20;},
+    {name = "SPLIT_CLAIM_PERC_VL"; sqlType = VARCHAR; nullable = true; comment = "Split Claim Percentage Value"; length=10;},
+    {name = "SPLIT_CLAIM_PERC_AMT"; sqlType = VARCHAR; nullable = true; comment = "Split Claim Percent Amount";length=25; },
+    {name = "PREVPDCLAMT_INDEMNITY"; sqlType = VARCHAR; nullable = true; comment = "Prev Paid Amt Indemnity"; length=25;},
+    {name = "PREVPDCLAMT_FEES"; sqlType = VARCHAR; nullable = true; comment = "Prev Paid Amt Fees"; length=25;},
+    {name = "PREVPDCLAMT_EXPENSES"; sqlType = VARCHAR; nullable = true; comment = "Prev Paid Amt Expenses"; length=25;},
+    {name = "SETLMNTCLAMT_INDEMNITY"; sqlType = VARCHAR; nullable = true; comment = "Settlement Claim amt Indemnity"; length=25;},
+    {name = "SETLMNTCLAMT_FEES"; sqlType = VARCHAR; nullable = true; comment = "Settlement Claim amt Fees"; length=25;},
+    {name = "SETLMNTCLAMT_EXPENSES"; sqlType = VARCHAR; nullable = true; comment = "Settlement Claim amt Expenses"; length=25;},
+    {name = "RESERVEAMOUNT_INDEMNITY"; sqlType = VARCHAR; nullable = true; comment = "Reserve Amount Indemnity";length=25; },
+    {name = "RESERVEAMOUNT_FEES"; sqlType = VARCHAR; nullable = true; comment = "Reserve Amount Fees";length=25; },
+    {name = "RESERVEAMOUNT_EXPENSES"; sqlType = VARCHAR; nullable = true; comment = "Reserve Amount Expenses";length=25; },    
+    {name = "AVAILCLM_FUND"; sqlType = VARCHAR; nullable = true; comment = "Available Claim Fund";length=25; },
+    {name = "AVAILOFFSET_PRMIUM"; sqlType = VARCHAR; nullable = true; comment = "Avail Offsset Premium";length=25; },
+    {name = "MEMBER_NAME"; sqlType = VARCHAR; nullable = true; comment = "Member Name"; length=35;},
+    {name = "MEMBER_EMAIL"; sqlType = VARCHAR; nullable = true; comment = "Member Email"; length=35;},
+    {name = "DUE_DATE"; sqlType = DATE; nullable = true;  comment = "Due Date";},
+    {name = "COLLECTED_DATE"; sqlType = DATE; nullable = true;  comment = "Collected Date";},
+    {name = "NOTIFY_ENABLED"; sqlType = VARCHAR; nullable = true; comment = "Notify Enables"; length=2;},
+	{name = "PAYER_ID"; sqlType = VARCHAR; nullable = true; comment = "Payer Id"; length=20;},
+	{name = "PAYER_NAME"; sqlType = VARCHAR; nullable = true; comment = "Payer Name"; length=20;},
+    {name = "DELETE_FLAG"; sqlType = VARCHAR; nullable = true; comment = "Delete Flag"; length=1;}
+     ];  
+table.primaryKey.pkcolumns = ["MEMBER_ID"];
+
+

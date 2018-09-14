@@ -1,0 +1,35 @@
+restfultasks:
+- id: r001
+  name: review
+  activityUniqueName: "review"
+  productUniqueName: "elseco"
+  moduleUniqueName: "claims"
+  perishObjName: "claim-file"
+  documentation: review operation
+  endpoint: null 
+  requestmapping: null 
+  responsemapping: null 
+  oldstatus: s
+  newstatus: r
+  autoswitchtaskid: null
+  autoswitchtasktype: null
+  oldusergroupassigned: null
+  newusergroupassigned: null
+
+- id: r002
+  name: approve 
+  activityUniqueName: "approve"
+  productUniqueName: "elseco"
+  moduleUniqueName: "claims"
+  perishObjName: "claim-file"
+  documentation: approve operation
+  endpoint: http://192.168.14.35:8082/nyms/health 
+  requestmapping: null 
+  responsemapping: null 
+  oldstatus: r
+  newstatus: a
+  autoswitchtaskid: null
+  autoswitchtasktype: null
+  oldusergroupassigned: reviewteam
+  newusergroupassigned: approveteam
+  

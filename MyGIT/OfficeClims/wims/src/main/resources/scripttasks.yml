@@ -1,0 +1,68 @@
+scripttasks:
+- id: c001
+  name: review
+  documentation: review operation
+  scriptformat: null
+  script: null
+  variables: null
+  executionlisteners: null
+  asynchronous: null
+  exclusive: null
+  multiinstancetype: null
+  cardinality: null
+  collection: null
+  elementvariable: null
+  completioncondition: null
+  isforcompensation: null
+  oldstatus: null
+  newstatus: null
+  autoswitchtaskid: null
+  autoswitchtasktype: null
+  oldusergroupassigned: null
+  newusergroupassigned: null
+  
+- id: c002
+  name: approve
+  documentation: approve operation
+  scriptformat: null
+  script: null
+  variables: null
+  executionlisteners: null
+  asynchronous: null
+  exclusive: null
+  multiinstancetype: null
+  cardinality: null
+  collection: null
+  elementvariable: null
+  completioncondition: null
+  isforcompensation: null
+  oldstatus: null
+  newstatus: null
+  autoswitchtaskid: null
+  autoswitchtasktype: null
+  oldusergroupassigned: null
+  newusergroupassigned: null
+  
+- id: c003
+  name: verify
+  documentation: verify operation
+  scriptformat: null
+  script: null
+  variables: null
+  executionlisteners: null
+  asynchronous: null
+  exclusive: null
+  multiinstancetype: null
+  cardinality: null
+  collection: null
+  elementvariable: null
+  completioncondition: null
+  isforcompensation: null
+  oldstatus: null
+  newstatus: null
+  autoswitchtaskid: null
+  autoswitchtasktype: null
+  oldusergroupassigned: null
+  newusergroupassigned: null
+
+  

@@ -1,0 +1,23 @@
+table.schemaName = "EL_CLAIMS";
+table.tableType = COLUMNSTORE;
+
+table.columns =
+ [
+    {name = "RISKOBJ_ID"; sqlType = INTEGER; nullable = false; comment = "Risk Object Id";},
+    {name = "RISKOBJ_NAME"; sqlType = VARCHAR; nullable = true; comment = "Risk Object Name"; length=30; },
+    {name = "RISKOBJ_DESC"; sqlType = VARCHAR; nullable = true;  comment = "Risk Object Description"; length=50;},
+    {name = "RISKOBJ_REGNO"; sqlType = VARCHAR; nullable = true; comment = "Risk Object Reg Number"; length=15;},
+    {name = "RISKOBJ_START_DATE"; sqlType = DATE; nullable = true; comment = "Risk Object Start Date";},
+    {name = "RISKOBJ_END_DATE"; sqlType = DATE; nullable = true; comment = "Risk Object End Date"; },
+    {name = "RISKSUMINSURED"; sqlType = DECIMAL; nullable = true; comment = "Risk Object Sum Insured"; length=15;},
+    {name = "CLAIM_HEADER_ID"; sqlType = INTEGER; nullable = true; comment = "Claim Header Id"; },
+    {name = "UCR_NO"; sqlType = VARCHAR; nullable = true; comment = "UCR Number"; length=15;},
+    {name = "CLAIM_DETAIL_ID"; sqlType = INTEGER; nullable = true; comment = "Claim Detail Id";},
+    {name = "EXTREFNO"; sqlType = VARCHAR; nullable = true; comment = "External Reference Number"; length=50;},
+    {name = "CREATED_DATE"; sqlType = DATE; nullable = true; comment = "Created Date"; },
+    {name = "CREATED_BY"; sqlType = VARCHAR; nullable = true; comment = "Created By"; length=10;},
+    {name = "MODIFIED_DATE"; sqlType = DATE; nullable = true; comment = "Date of Modification";},
+    {name = "MODIFIED_BY"; sqlType = VARCHAR; nullable = true; comment = "Modified By";length=10;},
+    {name = "DELETE_FLAG"; sqlType = VARCHAR; nullable = true; comment = "Delete Flag";length=1;}
+     ];
+table.primaryKey.pkcolumns = ["RISKOBJ_ID"];

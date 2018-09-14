@@ -1,0 +1,40 @@
+table.schemaName = "EL_CLAIMS";
+table.tableType = COLUMNSTORE;
+
+table.columns =
+ [
+    {name = "INTREF_ID"; sqlType = INTEGER; nullable = false; comment = "Internal Reference Id";},
+    {name = "STAMP_ID"; sqlType = INTEGER; nullable = true;  comment = "Stamp Id"; },
+    {name = "CLAIM_ID"; sqlType = INTEGER; nullable = true;  comment = "Claim Detail Id"; },
+    {name = "POLICY_TRANSACTION_ID"; sqlType = INTEGER; nullable = true; comment = "Policy Transaction Id";},
+    {name = "MARKET_TRANSACTION_ID"; sqlType = INTEGER; nullable = true; comment = "Market Transaction Id";},
+    {name = "CLAIM_HEADER_ID"; sqlType = INTEGER; nullable = true;  comment = "Claim Header Id"; },
+    {name = "ELSECO_RISK_CD"; sqlType = VARCHAR; nullable = true; comment = "Elseco Risk Code"; length=20;},
+    {name = "INTERNAL_REFERENCE_NO"; sqlType = VARCHAR; nullable = true; comment = "Internal Reference Number"; length=30;},
+    {name = "PREMIUM_SPLIT_VL"; sqlType = VARCHAR; nullable = true; comment = "Premium Split Vl"; length=10;},
+    {name = "SPLIT_CLAIM_PERC_VL"; sqlType = VARCHAR; nullable = true; comment = "Split Claim Percentage Value"; length=20;},
+    {name = "SPLIT_CLAIM_PERC_AMT"; sqlType = VARCHAR; nullable = true; comment = "Split ClaimPercAmt";length=25; },
+    {name = "STAMP_NAME"; sqlType = VARCHAR; nullable = true; comment = "Stamp Name";length=20;},
+    {name = "FUNDS_COLLECTED"; sqlType = VARCHAR; nullable = true; comment = "Funds Collected";length=20;},
+    {name = "TRANSACTIONTYPE"; sqlType = VARCHAR; nullable = true; comment = "Transaction Type"; length=200;},
+    {name = "TRANSACTIONSUBTYPE"; sqlType = VARCHAR; nullable = true; comment = "Transaction Sub Type"; length=200;},
+    {name = "COMMENT"; sqlType = VARCHAR; nullable = true; comment = "Comment"; length=200;},
+    {name = "SETLMNTCLAMT"; sqlType = DECIMAL; nullable = true; comment = "New Incurred Claimant"; length=25;},
+    {name = "PREVPDCLAMT"; sqlType = DECIMAL; nullable = true; comment = "New Incurred Claimant"; length=25;},
+    {name = "NWINCURDCLAMT"; sqlType = DECIMAL; nullable = true; comment = "New Incurred Claimant"; length=25;},
+    {name = "ORIGINALCURRENCY"; sqlType = VARCHAR; nullable = true; comment = "Original currency"; length=20;},
+    {name = "PREVPDCLAMT_INDEMNITY"; sqlType = VARCHAR; nullable = true; comment = "Prev Paid Amt Indemnity"; length=25;},
+    {name = "PREVPDCLAMT_FEES"; sqlType = VARCHAR; nullable = true; comment = "Prev Paid Amt Fees"; length=25;},
+    {name = "PREVPDCLAMT_EXPENSES"; sqlType = VARCHAR; nullable = true; comment = "Prev Paid Amt Expenses"; length=25;},
+    {name = "SETLMNTCLAMT_INDEMNITY"; sqlType = VARCHAR; nullable = true; comment = "Settlement Claim amt Indemnity"; length=25;},
+    {name = "SETLMNTCLAMT_FEES"; sqlType = VARCHAR; nullable = true; comment = "Settlement Claim amt Fees"; length=25;},
+    {name = "SETLMNTCLAMT_EXPENSES"; sqlType = VARCHAR; nullable = true; comment = "Settlement Claim amt Expenses"; length=25;},
+    {name = "RESERVEAMOUNT_INDEMNITY"; sqlType = VARCHAR; nullable = true; comment = "Reserve Amount Indemnity";length=25; },
+    {name = "RESERVEAMOUNT_FEES"; sqlType = VARCHAR; nullable = true; comment = "Reserve Amount Fees";length=25; },
+    {name = "RESERVEAMOUNT_EXPENSES"; sqlType = VARCHAR; nullable = true; comment = "Reserve Amount Expenses";length=25; },
+    {name = "DUEDATE"; sqlType = DATE; nullable = true; comment = "Due Date"; },
+    {name = "IS_COLLECTED"; sqlType = VARCHAR; nullable = true; comment = "Is collected"; length=20;},
+    {name = "COLLECT_PAY_ENABLED"; sqlType = VARCHAR; nullable = true; comment = "Collecte Pay Enabled"; length=2;},
+    {name = "DELETE_FLAG"; sqlType = VARCHAR; nullable = true; comment = "Delete Flag";length=1;}
+     ];
+table.primaryKey.pkcolumns = ["INTREF_ID"];

@@ -1,0 +1,37 @@
+table.schemaName = "EL_CLAIMS";
+table.tableType = COLUMNSTORE;
+
+table.columns =
+ [
+    {name = "CLAIM_TASK_ID"; sqlType = INTEGER; nullable = false; comment = "Claim Task Id";},
+    {name = "CLAIM_FILE_ID"; sqlType = INTEGER; nullable = true; comment = "Claim File Id";},
+    {name = "CLAIM_ITEM_ID"; sqlType = INTEGER; nullable = true; comment = "Claim Item Id";},
+    {name = "CLAIM_ID"; sqlType = INTEGER; nullable = true; comment = "Claim Id"; },
+    {name = "CLAIM_HEADER_ID"; sqlType = INTEGER; nullable = true; comment = "Claim Header Id";},
+    {name = "VERSION"; sqlType = VARCHAR; nullable = true; comment = "Version"; length=3;},
+    {name = "EFFECTIVE_DATE"; sqlType = DATE; nullable = true; comment = "Effective date";},
+    {name = "TASK_CD"; sqlType = VARCHAR; nullable = true; comment = "Task Code"; length=6;},
+    {name = "FLG_MANUAL"; sqlType = VARCHAR; nullable = true; comment = "Activity Set Manually"; length=1; },
+    {name = "STATUS"; sqlType = VARCHAR; nullable = true; comment = "Status of a Task"; length=1;},
+    {name = "SUBOBJ_CATG"; sqlType = VARCHAR; nullable = true; comment = "Claim Subobject Category"; length=2;},
+    {name = "SUB_OBJECT"; sqlType = VARCHAR; nullable = true; comment = "Subobject for Navigation"; length=16;},
+    {name = "TASK_NAME"; sqlType = VARCHAR; nullable = true; comment = "Task Name"; length=128;},
+    {name = "TASK_DESC"; sqlType = VARCHAR; nullable = true; comment = "Task Desc"; length=128;},
+    {name = "ACTIVITY_USED"; sqlType = VARCHAR; nullable = true; comment = "Activity Used to Process the Task"; length=6;},
+    {name = "DT_FIRST_SUBM"; sqlType = DATE; nullable = true; comment = "Date for First Submission in Workplace"; },
+    {name = "DT_LATEST_START"; sqlType = DATE; nullable = true; comment = "Date for Latest Start of Task"; },
+    {name = "DT_LATEST_END"; sqlType = DATE; nullable = true; comment = "Date for Latest End of Task"; },
+    {name = "DT_FIRST_SUBM_TIME"; sqlType = DATE; nullable = true; comment = "Date for First Submission in Workplace"; },
+    {name = "DT_LATEST_END_TIME"; sqlType = DATE; nullable = true; comment = "Date for Latest End of Task"; },
+    {name = "TASK_PRIORITY"; sqlType = VARCHAR; nullable = true; comment = "Task Priority"; length=2;},
+    {name = "TASK_HANDLR_CATG"; sqlType = VARCHAR; nullable = true; comment = "Manual Task Claim Handler Category"; length=4;},
+    {name = "TASK_HANDLER"; sqlType = VARCHAR; nullable = true; comment = "Proposed Handler for This Manual Task"; length=12;},
+    {name = "AUTH_GRP"; sqlType = VARCHAR; nullable = true; comment = "Authorization Group"; length=10;},
+    {name = "AUTH_USR"; sqlType = VARCHAR; nullable = true; comment = "Authorization User"; length=10;},
+    {name = "NOTIFY_SENT"; sqlType = VARCHAR; nullable = true; comment = "Flag"; length=10;},
+    {name = "NOTIFY_RECEIPIENTS"; sqlType = VARCHAR; nullable = true; comment = "Email addresses"; length=10;},
+     {name = "DELETE_FLAG"; sqlType = VARCHAR; nullable = true; comment = "Delete Flag"; length=1;}
+ ];
+table.primaryKey.pkcolumns = ["CLAIM_TASK_ID"];
+
+

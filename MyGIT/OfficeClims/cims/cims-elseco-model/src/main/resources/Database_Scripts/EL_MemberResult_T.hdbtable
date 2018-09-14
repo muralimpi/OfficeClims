@@ -1,0 +1,38 @@
+table.schemaName = "EL_CLAIMS";
+table.tableType = COLUMNSTORE;
+
+table.columns =
+ [
+    {name = "RESULT_ID"; sqlType = INTEGER; nullable = false; comment = "Result Id";},
+    {name = "MEMBER_ID"; sqlType = INTEGER; nullable = true; comment = "Member Id";},
+    {name = "INTREF_ID"; sqlType = INTEGER; nullable = true; comment = "Internal Reference Id";},
+    {name = "POLICY_TRANSACTION_ID"; sqlType = INTEGER; nullable = true; comment = "Policy Transaction Id";},
+    {name = "MARKET_TRANSACTION_ID"; sqlType = INTEGER; nullable = true; comment = "Market Transaction Id";},
+    {name = "CLAIM_ID"; sqlType = INTEGER; nullable = true; comment = "Claim Id";},
+    {name = "CLAIM_HEADER_ID"; sqlType = INTEGER; nullable = true; comment = "Claim Header Id";},
+    {name = "STAMP_ID"; sqlType = INTEGER; nullable = true; comment = "Stamp Id"; },
+    {name = "ELRISKCODE_ID"; sqlType = INTEGER; nullable = true;  comment = "EL Risk Code Id";},
+    {name = "MEMBER_BPID"; sqlType = INTEGER; nullable = true; comment = "Member BP Id";},
+    {name = "MEMBER_NAME"; sqlType = VARCHAR; nullable = true; comment = "Member Name";length=35;},
+    {name = "TOTAL_CAPACITY_AMT"; sqlType = DECIMAL; nullable = true; comment = "Total Capacity Amt"; length=15;},
+    {name = "TOTAL_SHARE_VL"; sqlType = VARCHAR; nullable = true; comment = "Total Share Vl";length=20;},
+    {name = "OWN_CAPACITY_AMT"; sqlType = DECIMAL; nullable = true; comment = "Own Capacity Amt";length=10;},
+    {name = "OWN_SHARE_VL"; sqlType = VARCHAR; nullable = true; comment = "Own Share Vl"; length=20;},
+    {name = "PAY_PREMIUM_TO_BPID"; sqlType = INTEGER; nullable = true; comment = "Pay Premium To Bp Id"; },
+    {name = "PAY_POLICY_BR_TO_BPID"; sqlType = INTEGER; nullable = true; comment = " Pay Policy Br To Bp Id";},
+    {name = "PAY_FF_TO_BPID"; sqlType = INTEGER; nullable = true; comment = "Pay Ff To Bp Id"; },
+    {name = "PAY_PB_TO_BPID"; sqlType = INTEGER; nullable = true; comment = "Pay Pb To Bp Id"; },
+    {name = "PAY_RIB_TO_BPID"; sqlType = INTEGER; nullable = true; comment = "Pay Rib To Bp Id"; },
+    {name = "POLICY_BROKERAGE_VL"; sqlType = VARCHAR; nullable = true; comment = "Policy Brokerage Vl"; length=20;},
+    {name = "ELSECO_COMMISSION_VL"; sqlType = VARCHAR; nullable = true; comment = "Elseco Commission Vl";length=20; },
+    {name = "FF_VL"; sqlType = VARCHAR; nullable = true; comment = "Ff Vl";length=20; },   
+    {name = "PB_VL"; sqlType = VARCHAR; nullable = true; comment = "Pb Vl";length=20; },
+    {name = "RIB_VL"; sqlType = VARCHAR; nullable = true; comment = "Rib Vl";length=20; },
+    {name = "PROFIT_COMMISSION_VL"; sqlType = VARCHAR; nullable = true; comment = "Profit Commission Vl"; length=20;},   
+    {name = "PB_BASIS"; sqlType = VARCHAR; nullable = true; comment = "Pb Basis";length=20; },
+    {name = "FF_BASIS"; sqlType = VARCHAR; nullable = true; comment = "Ff Basis";length=20; },
+    {name = "RIB_BASIS"; sqlType = VARCHAR; nullable = true; comment = "Rib Basis";length=20; },
+    {name = "AGREEMENT_ID"; sqlType = INTEGER; nullable = true; comment = "Agreement Id"; },
+    {name = "DELETE_FLAG"; sqlType = VARCHAR; nullable = true; comment = "Delete Flag"; length=1;}
+     ];
+table.primaryKey.pkcolumns = ["RESULT_ID"];

@@ -1,0 +1,28 @@
+table.schemaName = "EL_CLAIMS";
+table.tableType = COLUMNSTORE;
+
+table.columns =
+ [
+    {name = "CLAIM_NOTES_ID"; sqlType = INTEGER; nullable = false; comment = "Claim Notes Id";},
+    {name = "CLAIM_NOTES_VERSION"; sqlType = VARCHAR; nullable = true; comment = "Claim Notes Version"; length=3;},
+    {name = "CLAIM_HEADER_ID"; sqlType = INTEGER; nullable = true; comment = "Claim Header Id";},
+    {name = "CLAIM_HEADER_VERSION"; sqlType = VARCHAR; nullable = true; comment = "Claim Header Version"; length=3;},
+    {name = "CLAIM_ID"; sqlType = INTEGER; nullable = true; comment = "Claim Id";},
+    {name = "CLAIM_VERSION"; sqlType = VARCHAR; nullable = true; comment = "Claim Version"; length=3;},
+    {name = "CLAIM_ITEM_ID"; sqlType = INTEGER; nullable = true; comment = "Claim Item Id";},
+    {name = "CLAIM_ITEM_VERSION"; sqlType = VARCHAR; nullable = true; comment = "Claim Item Version"; length=3;},
+    {name = "CLAIM_FILE_ID"; sqlType = INTEGER; nullable = true; comment = "Claim File Id";},
+    {name = "CLAIM_FILE_VERSION"; sqlType = VARCHAR; nullable = true; comment = "Claim File Version"; length=3;},
+    {name = "CLAIM_TRANS_ID"; sqlType = INTEGER; nullable = true; comment = "Claim Transaction Id";},
+    {name = "CLAIM_TRANS_VERSION"; sqlType = VARCHAR; nullable = true; comment = "Claim Transaction Version"; length=3;},
+    {name = "CLAIM_RESERVE_ID"; sqlType = INTEGER; nullable = true; comment = "Claim Reserve Id";},
+    {name = "CLAIM_RESERVE_VERSION"; sqlType = VARCHAR; nullable = true; comment = "Claim Reserve Version"; length=3;},
+    {name = "NOTES_MESSAGE"; sqlType = VARCHAR; nullable = true; comment = "Notes Message"; length=1000;},
+    {name = "NOTES_DESC"; sqlType = VARCHAR; nullable = true; comment = "Notes Desc"; length=300;},
+    {name = "CREATEDBY"; sqlType = VARCHAR; nullable = true; comment = "Created By"; length=30;},
+    {name = "CREATEDDATE"; sqlType = TIMESTAMP; nullable = true; comment = "Created Date"; },
+     {name = "DELETE_FLAG"; sqlType = VARCHAR; nullable = true; comment = "Delete Flag"; length=1;}
+     ];
+table.primaryKey.pkcolumns = ["CLAIM_NOTES_ID"];
+
+

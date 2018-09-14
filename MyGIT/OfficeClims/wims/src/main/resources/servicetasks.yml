@@ -1,0 +1,98 @@
+servicetasks:
+- id: s001
+  name: review
+  documentation: reviewing the activity
+  classname: review
+  expression: review
+  delegateexpression: review
+  fldextnclass: null
+  resultvariablename: null
+  executionlisteners: null
+  multiinstancetype: null
+  cardinality: null
+  collection: null
+  elementvariable: null
+  completioncondition: null
+  isforcompensation: null
+  asynchronous: null
+  exclusive: null
+  oldstatus: s
+  newstatus: r
+  autoswitchtaskid: null
+  autoswitchtasktype: null
+  oldusergroupassigned: helpdeskteam
+  newusergroupassigned: reviewteam
+
+- id: s002
+  name: approve
+  documentation: approving the activity
+  classname: approve
+  expression: approve
+  delegateexpression: approve
+  fldextnclass: null
+  resultvariablename: null
+  executionlisteners: null
+  multiinstancetype: null
+  cardinality: null
+  collection: null
+  elementvariable: null
+  completioncondition: null
+  isforcompensation: null
+  asynchronous: null
+  exclusive: null
+  oldstatus: r
+  newstatus: a
+  autoswitchtaskid: null
+  autoswitchtasktype: null
+  oldusergroupassigned: reviewteam
+  newusergroupassigned: approveteam
+  
+- id: s003
+  name: verify
+  documentation: verifying the activity
+  classname: verify
+  expression: verify
+  delegateexpression: verify
+  fldextnclass: null
+  resultvariablename: null
+  executionlisteners: null
+  multiinstancetype: null
+  cardinality: null
+  collection: null
+  elementvariable: null
+  completioncondition: null
+  isforcompensation: null
+  asynchronous: null
+  exclusive: null
+  oldstatus: a
+  newstatus: v
+  autoswitchtaskid: null
+  autoswitchtasktype: null
+  oldusergroupassigned: approveteam
+  newusergroupassigned: verifyteam
+  
+- id: s004
+  name: closer
+  documentation: closing the activity
+  classname: closer
+  expression: closer
+  delegateexpression: closer
+  fldextnclass: null
+  resultvariablename: null
+  executionlisteners: null
+  multiinstancetype: null
+  cardinality: null
+  collection: null
+  elementvariable: null
+  completioncondition: null
+  isforcompensation: null
+  asynchronous: null
+  exclusive: null
+  oldstatus: v
+  newstatus: c
+  autoswitchtaskid: null
+  autoswitchtasktype: null
+  oldusergroupassigned: verifyteam
+  newusergroupassigned: closerteam
+  
+   

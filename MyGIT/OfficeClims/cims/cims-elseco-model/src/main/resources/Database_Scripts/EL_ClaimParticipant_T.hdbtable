@@ -1,0 +1,35 @@
+table.schemaName = "EL_CLAIMS";
+table.tableType = COLUMNSTORE;
+
+table.columns =
+ [
+    {name = "CLAIM_BUNDLE_ID"; sqlType = INTEGER; nullable = false;  comment = "Claim Bundle Id";},
+    {name = "CLAIM_ID"; sqlType = INTEGER; nullable = false; comment = "Claim Id";},
+    {name = "CLAIM_HEADER_ID"; sqlType = INTEGER; nullable = true; comment = "Claim Header Id";},
+    {name = "PARTICIPANT"; sqlType = VARCHAR; nullable = true; comment = "Claim Participant"; length=20;},
+    {name = "SUBOBJ_CATG"; sqlType = VARCHAR; nullable = true; comment = "Claim Subobject Category"; length=2;},
+    {name = "SUBOBJECT_NO"; sqlType = VARCHAR; nullable = true; comment = "Claim Subobject Number"; length=16;},
+    {name = "ROLE_CD"; sqlType = VARCHAR; nullable = true; comment = "Participant Role Key"; length=4;},
+    {name = "VERSION"; sqlType = VARCHAR; nullable = true; comment = "Version";length=3;},
+    {name = "CHNG_INDICATOR"; sqlType = VARCHAR; nullable = true; comment = "Change category"; length=1;},
+    {name = "EFFECTIVE_DATE"; sqlType = DATE; nullable = true; comment = "Effective date";},
+    {name = "REFERENCE"; sqlType = VARCHAR; nullable = true; comment = "Reference"; length=30;},
+    {name = "RELTYPE"; sqlType = VARCHAR; nullable = true; comment = "Type of Relationship to Policyholder";length=1;},
+    {name = "PART_TEXT01"; sqlType = VARCHAR; nullable = true; comment = "Long Text ";length=50;},
+    {name = "DT_FILE_REQUESTED"; sqlType = DATE; nullable = true; comment = " File Requested";},
+    {name = "PARTTYPE"; sqlType = VARCHAR; nullable = true; comment = "Participation Type of Claimant";length=2;},
+    {name = "SEAT"; sqlType = VARCHAR; nullable = true; comment = "Position of Person";length=1;},
+    {name = "FLG_SALESTAX"; sqlType = VARCHAR; nullable = true; comment = "Does Not Pay Value-Added Tax"; length=1;},
+    {name = "LIABILITY_RATE"; sqlType = DECIMAL; nullable = true; comment = "Percentage ";length=5;},
+    {name = "FLG_INTRACOMPANY"; sqlType = VARCHAR; nullable = true; comment = "Intra-Company";length=1;},
+    {name = "FLG_NOT_INS"; sqlType = VARCHAR; nullable = true; comment = "Not Insured ";length=1;},
+    {name = "FLG_WITNES_CNF"; sqlType = VARCHAR; nullable = true; comment = "Witness Statement Confirmed by Other Witnesses";length=1;},
+    {name = "JUDGEMENT"; sqlType = VARCHAR; nullable = true; comment = "Evaluation of Witness/Statement";length=2;},
+    {name = "FLG_KNOWN2DRIVER"; sqlType = VARCHAR; nullable = true; comment = "Does Witness Know any of the Claimants";length=1;},
+    {name = "DRVER_AGE"; sqlType = VARCHAR; nullable = true; comment = "Age of Driver";length=3;},
+    {name = "DT_DRVL_ISSUE"; sqlType = DATE; nullable = true; comment = "Date of Issue of Driver's License";},
+    {name = "DT_OF_BIRTH"; sqlType = DATE; nullable = true; comment = "Date of birth of business partner";}
+     ];
+table.primaryKey.pkcolumns = ["CLAIM_BUNDLE_ID"];
+
+

@@ -1,0 +1,31 @@
+server:
+  contextPath: /mims
+mimsConfigFileName: mims_config
+mimsConfigFileLocation: /root/tools/services/config/
+swagger.api:
+  title: MIMS
+  description: MFile Integration Micro Service
+  version: mims-1.0.0
+  termsOfServiceUrl: http://www.else.co/
+  license: Test licence
+  licenseUrl: http://www.else.co/
+  contact:
+    name: elseco - Team
+    url: http://www.else.co/
+    email: contactus@else.co
+    
+mfile.server.rest:
+  baseUrl: http://192.168.14.184:8080/REST
+  loginUrl: ${mfile.server.rest.baseUrl}/server/authenticationtokens.aspx
+  searchDocUrl: ${mfile.server.rest.baseUrl}/objects?q=
+  quickSearchUrl: ${mfile.server.rest.baseUrl}/objects?
+  username: serole_vpn_user
+  password: serole123
+  vaultLoginUrl: ${mfile.server.rest.baseUrl}/session/vaults
+  vaultName: Aviation Document Vault
+  downlodUrl: ${mfile.server.rest.baseUrl}/objects
+  deleteUrl: ${mfile.server.rest.baseUrl}/objects
+  file.upload.tempDir: uploadDir
+  uploadUrl: ${mfile.server.rest.baseUrl}/objects/0?checkIn=true
+  tempUploadUrl: ${mfile.server.rest.baseUrl}/files
+  updateMetadataUrl: ${mfile.server.rest.baseUrl}/objects/{objectVersionType}/{objectVersionId}/{obejctVersion}/properties

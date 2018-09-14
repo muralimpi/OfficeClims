@@ -1,0 +1,43 @@
+# Environment Details related to Developement/Testing 
+spring:
+  profiles: 
+    active: dev
+    #active: sit
+    #active: uat    
+    #active: prod
+    #active: local
+        
+
+swagger.api:
+  title: MIMS
+  description: MFile Integration Micro Service
+  version: mims-1.0.0
+  termsOfServiceUrl: http://www.else.co/
+  license: Test licence
+  licenseUrl: http://www.else.co/
+  contact:
+    name: elseco - Team
+    url: http://www.else.co/
+    email: contactus@else.co
+
+server:
+  port: 8081
+  contextPath: /mims
+mfile.server.rest:
+  baseUrl: http://192.168.12.41:8080/REST  
+  username: aviation_vpn_user
+  password: Aviation@123
+  vaultName: Aviation Document Vault - DEVELOPMENT
+  loginUrl: ${mfile.server.rest.baseUrl}/server/authenticationtokens.aspx
+  searchDocUrl: ${mfile.server.rest.baseUrl}/objects?q=
+  quickSearchUrl: ${mfile.server.rest.baseUrl}/objects?
+  vaultLoginUrl: ${mfile.server.rest.baseUrl}/session/vaults
+  downlodUrl: ${mfile.server.rest.baseUrl}/objects
+  deleteUrl: ${mfile.server.rest.baseUrl}/objects
+  file.upload.tempDir: uploadDir
+  uploadUrl: ${mfile.server.rest.baseUrl}/objects/0?checkIn=true
+  tempUploadUrl: ${mfile.server.rest.baseUrl}/files
+  updateMetadataUrl: ${mfile.server.rest.baseUrl}/objects/{objectVersionType}/{objectVersionId}/{obejctVersion}/properties
+
+        
+  

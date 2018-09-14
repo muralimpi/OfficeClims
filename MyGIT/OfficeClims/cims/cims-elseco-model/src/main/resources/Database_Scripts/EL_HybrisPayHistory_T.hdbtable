@@ -1,0 +1,30 @@
+table.schemaName = "EL_CLAIMS";
+table.tableType = COLUMNSTORE;
+
+table.columns =
+ [
+    {name = "PAYHISTORY_ID"; sqlType = INTEGER; nullable = false; comment = "Payment History Id";},
+    {name = "CLAIM_HEADER_ID"; sqlType = INTEGER; nullable = true; comment = "Claim Header Id";},
+    {name = "CLAIM_DETAIL_ID"; sqlType = INTEGER; nullable = true; comment = "Claim Detail Id";},
+    {name = "CLAIM_TRANSACTION_ID"; sqlType = INTEGER; nullable = true; comment = "Claim Transaction Id";},
+    {name = "CLAIM_INTREF_ID"; sqlType = INTEGER; nullable = true; comment = "Claim Internal Reference Id";},
+    {name = "MEMBER_ID"; sqlType = INTEGER; nullable = true; comment = "Member Id";},
+	{name = "PAYER_ID"; sqlType = VARCHAR; nullable = true; comment = "Payer Id"; length=20;},
+    {name = "UCR"; sqlType = VARCHAR; nullable = true; comment = "UCR "; length=255;},
+    {name = "UMR"; sqlType = VARCHAR; nullable = true; comment = "UMR"; length=255;},
+    {name = "EL_CLAIM_ID"; sqlType = VARCHAR; nullable = true; comment = "Elseco Claim Id"; length=25;},
+    {name = "SETTLEMENT_AM_INDEM"; sqlType = VARCHAR; nullable = true; comment = "Settlement Amount Indemnity"; length=25;},
+    {name = "SETTLEMENT_AM_FEES"; sqlType = VARCHAR; nullable = true; comment = "Settlement Amount Fees"; length=25;},
+    {name = "SETTLEMENT_AM_EXP"; sqlType = VARCHAR; nullable = true; comment = "Settlement Amount Expenses"; length=25;},
+    {name = "RESERVE_AM_INDEM"; sqlType = VARCHAR; nullable = true; comment = "Reserce Amount Indemnity"; length=25;},
+    {name = "RESERVE_AM_FEES"; sqlType = VARCHAR; nullable = true; comment = "Reserce Amount Fees"; length=25;},
+    {name = "RESERVE_AM_EXP"; sqlType = VARCHAR; nullable = true; comment = "Reserce Amount Expenses"; length=25;},
+    {name = "INCURRED_AM"; sqlType = VARCHAR; nullable = true; comment = "Incurred Amount"; length=25;},
+    {name = "CURRENCY"; sqlType = VARCHAR; nullable = true; comment = "Currency"; length=25;},
+    {name = "PAYMT_TYP"; sqlType = VARCHAR; nullable = true; comment = "Payment Type"; length=25;},
+    {name = "STATUS"; sqlType = VARCHAR; nullable = true; comment = "Status"; length=25;},
+    {name = "IS_COLLECTED"; sqlType = VARCHAR; nullable = true; comment = "Is collected"; length=2;}
+     ];
+table.primaryKey.pkcolumns = ["PAYHISTORY_ID"];
+
+

@@ -1,0 +1,18 @@
+table.schemaName = "EL_CLAIMS";
+table.tableType = COLUMNSTORE;
+table.columns =
+ [
+    {name = "ID"; sqlType = INTEGER; nullable = false; comment = "ID";},
+    {name = "APPLICATIONHANDLE"; sqlType = VARCHAR; nullable = true; comment = " Application Handle"; length=20;},
+    {name = "MODULEHANDLE"; sqlType = VARCHAR; nullable = true; comment = "Module Handle" ; length=20;},
+    {name = "SCREENHANDLE"; sqlType = VARCHAR; nullable = true; comment = "Screen Handle" ; length=20;},
+    {name = "UNIQUEID"; sqlType = VARCHAR; nullable = true; comment = "Unique Id" ; length=20;},
+    {name = "CRUDENTITYHANDLE"; sqlType = VARCHAR; nullable = true; comment = "Crud Entity Handle" ; length=100;},
+    {name = "OPERATORTYPE"; sqlType = VARCHAR; nullable = true; comment = " Operator Type"; length=10;},
+    {name = "OLDCLOBJSON"; sqlType = CLOB; nullable = true; comment = "old Json from Audit"; },
+    {name = "NEWCLOBJSON"; sqlType = CLOB; nullable = true; comment = "New Json with changes"; },
+    {name = "SOURCEIPADDRESS"; sqlType = VARCHAR; nullable = true; comment = "Source IP Address"; length=100;},
+    {name = "CREATEDBY"; sqlType = VARCHAR; nullable = true; comment = "Created BY"; length=20;},
+    {name = "CREATEDDATETIME"; sqlType = TIMESTAMP; nullable = true; comment = "Created Date Time";}
+    ];
+table.primaryKey.pkcolumns = ["ID"];  

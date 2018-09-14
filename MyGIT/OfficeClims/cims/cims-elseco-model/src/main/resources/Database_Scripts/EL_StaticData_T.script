@@ -1,0 +1,15 @@
+CREATE COLUMN TABLE "EL_CLAIMS"."EL_ELSECO.EL_CLAIMS.EL_DB::EL_StaticData_T" ("ID" INTEGER CS_INT NOT NULL ,
+	 "ApplicationHandle" VARCHAR(100),
+	 "ScreenHandle" VARCHAR(100) NOT NULL ,
+	 "Depend1" VARCHAR(20),
+	 "Depend2" VARCHAR(20),
+	 "EntityHandle" VARCHAR(20),
+	 "EntityCode" VARCHAR(100),
+	 "EntityName1" VARCHAR(100),
+	 "EntityName2" VARCHAR(100),
+	 "EntityDesc" VARCHAR(200),
+	 "IsEnable" VARCHAR(10),
+	 "Status" VARCHAR(100),
+	 PRIMARY KEY ("ID")) UNLOAD PRIORITY 5 AUTO MERGE 
+;
+COMMENT ON COLUMN "EL_CLAIMS"."EL_ELSECO.EL_CLAIMS.EL_DB::EL_StaticData_T"."ID" is 'Elseco-Uniqie ID'

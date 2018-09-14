@@ -1,0 +1,21 @@
+table.schemaName = "EL_CLAIMS";
+table.tableType = COLUMNSTORE;
+
+table.columns =
+ [  
+ {name = "CHECKLIST_ID"; sqlType = INTEGER; nullable = false; comment = "Check List Id";},
+ {name = "CHECKLIST_NAME"; sqlType = VARCHAR; nullable = true; comment = "Check List Name"; length=250;},
+ {name = "CHECKLIST_GROUP"; sqlType = VARCHAR; nullable = true; comment = "Check List Group"; length=20;},
+ {name = "CLAIM_HEADER_ID"; sqlType = INTEGER; nullable = true; comment = "Claim Header Id";},
+ {name = "CLAIM_DETAIL_ID"; sqlType = INTEGER; nullable = true; comment = "Claim Detail Id"; },
+ {name = "CLAIM_FILE_ID"; sqlType = INTEGER; nullable = true; comment = "Claim File Id";},
+ {name = "CLAIM_ITEM_ID"; sqlType = INTEGER; nullable = true; comment = "Claim Item Id";},
+ {name = "UCR_NO"; sqlType = VARCHAR; nullable = true; comment = "Unique Claim Reference Number";length=40;},
+ {name = "EXTERNAL_REF"; sqlType = VARCHAR; nullable = true; comment = "External Reference Number";length=60;},
+ {name = "LEVEL"; sqlType = VARCHAR; nullable = true; comment = "Level";length=1;},
+ {name = "IS_CHECKED"; sqlType = VARCHAR; nullable = true; comment = "Is Checked"; length=20;},
+ {name = "CHECKED_BY"; sqlType = VARCHAR; nullable = true; comment = "Checked By"; length=20;},
+ {name = "CHECKED_DATE"; sqlType = TIMESTAMP; nullable = true; comment = "Checked Date"; },
+ {name = "DELETE_FLAG"; sqlType = VARCHAR; nullable = true; comment = "Delete Flag"; length=1;} 
+ ];
+table.primaryKey.pkcolumns = ["CHECKLIST_ID"];

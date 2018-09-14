@@ -1,0 +1,27 @@
+restfultasks:
+- id: r001
+  name: review
+  documentation: review operation
+  endpoint: null 
+  requestmapping: null 
+  responsemapping: null 
+  oldstatus: s
+  newstatus: r
+  autoswitchtaskid: null
+  autoswitchtasktype: null
+  oldusergroupassigned: null
+  newusergroupassigned: null
+
+- id: r002
+  name: approve 
+  documentation: approve operation
+  endpoint: null 
+  requestmapping: null 
+  responsemapping: null 
+  oldstatus: r
+  newstatus: a
+  autoswitchtaskid: null
+  autoswitchtasktype: null
+  oldusergroupassigned: null
+  newusergroupassigned: null
+  

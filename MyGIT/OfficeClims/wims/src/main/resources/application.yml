@@ -1,0 +1,20 @@
+swagger.api:
+  title: wims
+  description: wims api for POC
+  version: 1.0.0
+  termsOfServiceUrl: http://localhost:8090/wims
+  license: Test licence
+  licenseUrl: http://www.test.com/licence
+  contact:
+    name: Serole - Java Team
+    url: http://www.test.com
+    email: dinesh.nadikatla@serole.com
+    
+server:
+  port: 8083
+  contextPath: /wims
+  
+wims:
+  endpoint: http://192.168.14.35:8082/nyms/mail/test
+
+#spring.freemarker.template-loader-path=classpath:/email-templates

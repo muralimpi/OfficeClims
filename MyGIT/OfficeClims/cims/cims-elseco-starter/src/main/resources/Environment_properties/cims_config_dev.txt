@@ -1,0 +1,74 @@
+#Application will be running on the below port number
+server.port=8084
+cims.deployment.server.ip=192.168.14.35
+
+#Application contextPath
+server.contextPath=/cims
+
+# Environment Details related to Developement/Testing 
+spring.profiles.active=dev
+##spring.profiles.active=uat
+##spring.profiles.active=prod
+##spring.profiles.active=local
+cims.environment=${spring.profiles.active}
+
+#Nyms Application will be running on the below server ip address
+nyms.deployment.server.ip=192.168.14.35
+nyms.deployment.running.port=8082
+
+#Nyms Application access for various services publishes
+cims.to.nyms.uri.generate.attachment=http://${nyms.deployment.server.ip}:${nyms.deployment.running.port}/nyms/mail/create/claim/notify
+cims.to.nyms.uri.release.payment.notify=http://${nyms.deployment.server.ip}:${nyms.deployment.running.port}/nyms/mail/release/payment/notify
+cims.to.nyms.uri.collect.fund.notify=http://${nyms.deployment.server.ip}:${nyms.deployment.running.port}/nyms/mail/collect/fund/notify
+
+## Member Emails Configuration- Default Email Ids if no emails are specified 
+cims.member.result.email=dinesh.nadikatla@serole.com,sonjoy.chakraborty@serole.com
+
+## Used in Notification and Workflow services
+cims.notification.workflow.service=/updateStatus/{operationHandle}/{userBpId}/{headerId}/{detailId}/{statusHandle}
+cims.notification.workflow.service.operationHandle={operationHandle}
+cims.notification.workflow.service.userBpId={userBpId}
+cims.notification.workflow.service.headerId={headerId}
+cims.notification.workflow.service.detailId={detailId}
+cims.notification.workflow.service.statusHandle={statusHandle}
+
+##  HANA Database server details
+cims.hana.datasource.driverClassName=com.sap.db.jdbc.Driver
+cims.hana.datasource.url=jdbc:sap://quo.elpqmhdbdev:32053
+cims.hana.datasource.username=ELSECO_APP_USER
+cims.hana.datasource.password=Elseco1234
+cims.hana.datasource.schema=EL_CLAIMS
+cims.hana.datasource.package=EL_ELSECO.EL_CLAIMS.EL_DB
+
+## To get the available premium funds from PQM
+cims.to.rfc.balanceamount.app.server=192.168.14.28
+cims.to.rfc.balanceamount.instance.number=00
+cims.to.rfc.balanceamount.system.id=NSD
+cims.to.rfc.balanceamount.client=120
+cims.to.rfc.balanceamount.user=PQM2S4HANA
+cims.to.rfc.balanceamount.password=123456
+cims.to.rfc.balanceamount.standard.fm=BAPI_CTRACCONTRACTACCOUNT_GBAL
+cims.to.rfc.balanceamount.lang=en
+cims.to.rfc.balanceamount.destination.name=availPrmFund
+
+## Constants defined for the Application - To connect to Hybris and process the collection of Payment
+cims.to.hybris.app.server=192.168.14.30
+cims.to.hybris.instance.number=10
+cims.to.hybris.system.id=NSD
+cims.to.hybris.client=120
+cims.to.hybris.user=CRMRFCUSER
+cims.to.hybris.password=El$ec0S4Hs@P
+cims.to.hybris.standard.fm=YEL_FM_PQMCLAIMS
+cims.to.hybris.lang=en
+cims.to.hybris.destination.name=collectPay
+
+## Constants defined for the Application - To connect to Hybris and process the release of Payment
+cims.to.hybris.relpaymnt.app.server=192.168.14.30
+cims.to.hybris.relpaymnt.instance.number=10
+cims.to.hybris.relpaymnt.system.id=NSD
+cims.to.hybris.relpaymnt.client=120
+cims.to.hybris.relpaymnt.user=CRMRFCUSER
+cims.to.hybris.relpaymnt.password=El$ec0S4Hs@P
+cims.to.hybris.relpaymnt.standard.fm=YEL_FM_PQMCLAIMSRELEASEPAY
+cims.to.hybris.relpaymnt.lang=en
+cims.to.hybris.relpaymnt.destination.name=reservePay

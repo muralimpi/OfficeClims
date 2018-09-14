@@ -1,0 +1,29 @@
+﻿management.health:
+  defaults.enabled: true
+  diskspace.enabled: true
+endpoints:
+  health.sensitive: false
+  cors:
+    allowed-origins: '*'
+    allowed-methods: GET, POST, PUT, DELETE
+info.app:
+  name: NYMS
+  description: NYMS(Notification Micro Service). This is the notification engine for serole.
+  version: 1.0.0
+
+nymsConfigFileName: nyms_config
+nymsConfigFileLocation: /root/tools/services/config/
+
+mail.custom:
+  mailConfigMap:
+    name: <br/>Vadivel PM
+    signature: <br/>Java Team. Hydrabad.
+    location: Unit No 11B, 5th Floor, Building No. 9, K. Raheja IT Park – MindSpace, Madhapur, Hyderabad, Telangana 500081
+    from: sonjoy.chakraborty@serole.com
+    to: vadivel.pm@serole.com
+    subject: Test mail from NYMS.
+    content: Sending Email for testing pursponse using <b>FreeMarker template !!!</b> <br/></br>This is the sample test mail from NYMS.  <br/><br/><br/> *********NO Reply************
+ 
+
+
+  

@@ -1,0 +1,50 @@
+# Environment Details related to Developement/Testing 
+spring:
+  profiles: 
+    active: dev
+    #active: sit
+    #active: uat    
+    #active: prod
+    #active: local
+        
+spring.mail:
+  host: smtp.gmail.com
+  port: 587
+  protocol: smtp
+  defaultEncoding: UTF-8
+  username: sonjoy.chakraborty@serole.com
+  password: chakra1978
+  properties.mail:
+    smtp:
+      starttls:
+        enable: true
+        required: true
+      auth: true
+      connectiontimeout: 5000
+      timeout: 5000
+      writetimeout: 5000
+
+server:
+  port: 8082
+  contextPath: /nyms
+
+nyms.mail.service:
+  cc: faisal.pc@else.co,vijaykumar.ramagiri@serole.com,amitav.mohapatra@serole.com,dinesh.nadikatla@serole.com,sonjoy.chakraborty@serole.com
+  to: faisal.pc@else.co,vijaykumar.ramagiri@serole.com,amitav.mohapatra@serole.com,dinesh.nadikatla@serole.com,sonjoy.chakraborty@serole.com
+  from: elseco-claims-manager@elseco.com
+
+swagger.api:
+  title: NYMS
+  description: Notification Micro Service
+  version: nyms-1.0.0
+  termsOfServiceUrl: http://www.else.co/
+  license: Test licence
+  licenseUrl: http://www.else.co/
+  contact:
+    name: elseco - Team
+    url: http://www.else.co/
+    email: contactus@else.co
+    
+
+        
+  

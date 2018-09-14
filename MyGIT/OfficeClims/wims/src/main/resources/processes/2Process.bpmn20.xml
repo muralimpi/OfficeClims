@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="Examples" xmlns:modeler="http://activiti.com/modeler" modeler:version="1.0ev" modeler:exportDateTime="20171222103503" modeler:modelId="1038143" modeler:modelVersion="1" modeler:modelLastUpdated="1513938896415">
+  <message id="messageId" name="ourMessage"/>
+  <process id="sampleProcess" name="Sample Process" isExecutable="true">
+    <startEvent id="start">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[start]]></modeler:editor-resource-id>
+      </extensionElements>
+      <messageEventDefinition messageRef="messageId"/>
+    </startEvent>
+    <sequenceFlow id="sequenceFlow-15c0a3cc-19d4-474a-b2ea-7ccf528abefc" sourceRef="start" targetRef="theTask">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sequenceFlow-15c0a3cc-19d4-474a-b2ea-7ccf528abefc]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <userTask id="theTask" name="Task" activiti:async="true" activiti:candidateGroups="${group}">
+      <documentation>Do the task.</documentation>
+      <extensionElements>
+        <modeler:allow-send-email><![CDATA[true]]></modeler:allow-send-email>
+        <modeler:initiator-can-complete><![CDATA[false]]></modeler:initiator-can-complete>
+        <modeler:editor-resource-id><![CDATA[theTask]]></modeler:editor-resource-id>
+      </extensionElements>
+    </userTask>
+    <sequenceFlow id="sequenceFlow-0070aff4-07a1-4d35-a853-1b667bd0490a" sourceRef="theTask" targetRef="anotherTask">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sequenceFlow-0070aff4-07a1-4d35-a853-1b667bd0490a]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <userTask id="anotherTask" name="Another Task" activiti:async="true" activiti:candidateGroups="${group}">
+      <documentation>Do Another task.</documentation>
+      <extensionElements>
+        <modeler:allow-send-email><![CDATA[true]]></modeler:allow-send-email>
+        <modeler:initiator-can-complete><![CDATA[false]]></modeler:initiator-can-complete>
+        <modeler:editor-resource-id><![CDATA[anotherTask]]></modeler:editor-resource-id>
+      </extensionElements>
+    </userTask>
+    <sequenceFlow id="sequenceFlow-97e10cf6-d192-4a7f-847b-4f13b0f67bcd" sourceRef="anotherTask" targetRef="theEnd">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sequenceFlow-97e10cf6-d192-4a7f-847b-4f13b0f67bcd]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <endEvent id="theEnd">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[theEnd]]></modeler:editor-resource-id>
+      </extensionElements>
+    </endEvent>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_simpleProcess">
+    <bpmndi:BPMNPlane bpmnElement="simpleProcess" id="BPMNPlane_simpleProcess">
+      <bpmndi:BPMNShape bpmnElement="start" id="BPMNShape_start">
+        <omgdc:Bounds height="30.0" width="30.5" x="315.0" y="225.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="theTask" id="BPMNShape_theTask">
+        <omgdc:Bounds height="60.0" width="100.0" x="395.0" y="210.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="anotherTask" id="BPMNShape_anotherTask">
+        <omgdc:Bounds height="60.0" width="100.0" x="540.0" y="210.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="theEnd" id="BPMNShape_theEnd">
+        <omgdc:Bounds height="28.0" width="28.0" x="695.0" y="225.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="sequenceFlow-15c0a3cc-19d4-474a-b2ea-7ccf528abefc" id="BPMNEdge_sequenceFlow-15c0a3cc-19d4-474a-b2ea-7ccf528abefc">
+        <omgdi:waypoint x="345.5" y="240.0"/>
+        <omgdi:waypoint x="395.0" y="240.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sequenceFlow-97e10cf6-d192-4a7f-847b-4f13b0f67bcd" id="BPMNEdge_sequenceFlow-97e10cf6-d192-4a7f-847b-4f13b0f67bcd">
+        <omgdi:waypoint x="640.0" y="240.0"/>
+        <omgdi:waypoint x="667.5" y="240.0"/>
+        <omgdi:waypoint x="667.5" y="239.0"/>
+        <omgdi:waypoint x="695.0" y="239.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sequenceFlow-0070aff4-07a1-4d35-a853-1b667bd0490a" id="BPMNEdge_sequenceFlow-0070aff4-07a1-4d35-a853-1b667bd0490a">
+        <omgdi:waypoint x="495.0" y="240.0"/>
+        <omgdi:waypoint x="540.0" y="240.0"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>
